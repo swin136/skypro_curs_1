@@ -89,7 +89,7 @@ for number in range(TOTAL_ANSWERS):
     user_test_word = get_random_word(word_list)
     template_morse_word = morse_encode(morse_code, user_test_word)
     # Для тестирования выводим правильное слово
-    #print(f"Случайное слово № {number + 1} из списка >>> {user_test_word}")
+    print(f"Случайное слово № {number + 1} из списка >>> {user_test_word}")
     print(f"Слово {number + 1} {template_morse_word}")
     user_variant = input("Введите Ваш вариант: ").lower()
 
