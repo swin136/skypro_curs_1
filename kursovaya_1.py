@@ -6,7 +6,9 @@ import random
 
 # Количество впоросов для тестирования пользователя
 TOTAL_ANSWERS = 5
-DEBUG = False
+
+# Для отключения отладочных сообщений
+DEBUG = bool(1)
 
 def print_statistics(user_answers):
     """
