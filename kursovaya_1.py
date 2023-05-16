@@ -46,9 +46,9 @@ def morse_encode(morse_list, words_to_encode):
     return str(morse)
 
 # Список слов для проверки пользователя
-word_list = ["bird", "tree", "freedom", "random", 
-              "magic", "power", "glory", "seed", "beauty",
-              "flower", "reader", "writer", "save", "spirit",
+word_list = ["bird", "tree", "freedom", "random", "timer", 
+              "magic", "power", "glory", "seed", "beauty", "grafana",
+              "flower", "reader", "writer", "save", "spirit", "traffic",
               "heart", "friend", "queen", "innuendo", "rapsody",
               "trip", "type", "python", "pascal", "ruby", "Welcome",
               "morning", "day", "moon", "west", "north", "east", "south",
@@ -79,21 +79,24 @@ morse_code = dict(zip(morse_symbols, morse_symbols_trasl))
 
 
 # Начало программы
-# Выодим сообщение пользователю
+# Выводим сообщение пользователю
 
 print("Сегодня мы потренируемся расшифровывать азбуку Морзе")
 input("Нажмите Enter и начнем ")
 
 
 # Выводим список слов для тестирования пользователя
+# в количессвте TOTAL_ANSWERS раз
 for number in range(TOTAL_ANSWERS):
     #Получаем слово для тестирования пользователя
     user_test_word = get_random_word(word_list)
     template_morse_word = morse_encode(morse_code, user_test_word)
     # Для тестирования выводим правильное слово
     if DEBUG: print(f"Случайное слово № {number + 1} из списка >>> {user_test_word}")
-    print(f"Слово {number + 1} {template_morse_word}")
-    user_variant = input("Введите Ваш вариант: ").lower()
+    print(f"Слово {number + 1} >>> {template_morse_word}")
+    user_variant = ""
+    while user_variant == "":
+        user_variant = input("Введите Ваш вариант: ").lower().strip()
 
     if user_variant == user_test_word:
         print(f"Верно, {user_variant} !")
