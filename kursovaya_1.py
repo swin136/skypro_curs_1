@@ -34,7 +34,7 @@ def morse_encode(morse_list, words_to_encode):
     Функция преобразует введенное пользователем слов в нижний регистр
     затем кодирует его по системе Морзе и возращает в виде строки
     В функцию передаем ссылку на ранее созданный словарь со значением
-    символов и соотвествующих им кодар Морзе
+    символов и соотвествующих им кодов Морзе
     """
     user_word = list(words_to_encode.lower())
     morse = ""
@@ -94,6 +94,7 @@ for number in range(TOTAL_ANSWERS):
     # Для тестирования выводим правильное слово
     if DEBUG: print(f"Случайное слово № {number + 1} из списка >>> {user_test_word}")
     print(f"Слово {number + 1} >>> {template_morse_word}")
+    # Исключаем пустой ввод пользователя
     user_variant = ""
     while user_variant == "":
         user_variant = input("Введите Ваш вариант: ").lower().strip()
