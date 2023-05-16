@@ -52,10 +52,10 @@ word_list = ["bird", "tree", "freedom", "random",
               "heart", "friend", "queen", "innuendo", "rapsody",
               "trip", "type", "python", "pascal", "ruby", "Welcome",
               "morning", "day", "moon", "west", "north", "east", "south",
-              "god", "kingthom", "swap", "linux", "pray", "Sault", "unix", 
+              "god", "kingthom", "swap", "linux", "pray", "Salt", "unix", 
               "FreeBSD", "OpenBSD", "FreeNas", "Debian", "pillow", "capital", "tower", 
               "user", "Snake", "security", "setting", "kernel", "release", "module", 
-              "edit", "selection", "ordinary", "terminal"]
+              "edit", "selection", "ordinary", "terminal", "zabbix"]
 
 # Список для хранения ответов пользователя
 answers = []
