@@ -10,7 +10,6 @@ TOTAL_ANSWERS = 5
 def print_statistics(user_answers):
     """
     Выводит статистику ответов пользователя
-
     """
     total_answers = len(user_answers)
     total_right_answers = user_answers.count(True)
@@ -97,7 +96,7 @@ for number in range(TOTAL_ANSWERS):
         print(f"Верно, {user_variant}!")
         answers.append(True)
     else:
-        print(f"Неверно, {user_variant}!")
+        print(f"Неверно, {user_test_word}!")
         answers.append(False)
 
 
