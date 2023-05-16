@@ -8,7 +8,7 @@ import random
 TOTAL_ANSWERS = 5
 
 # Для отключения отладочных сообщений
-DEBUG = bool(1)
+DEBUG = bool(0)
 
 def print_statistics(user_answers):
     """
@@ -42,7 +42,7 @@ def morse_encode(morse_list, words_to_encode):
         if j == 0:
             morse = morse_code.get(user_word[j])  
         else:
-           morse = morse +" " + morse_code.get(user_word[j])   
+           morse = morse + " " + morse_code.get(user_word[j])   
     return str(morse)
 
 # Список слов для проверки пользователя
