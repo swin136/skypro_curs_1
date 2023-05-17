@@ -99,7 +99,9 @@ for number in range(TOTAL_ANSWERS):
     while True:
         user_variant = input("Введите Ваш вариант: ").lower().strip()
         if user_variant != "": break
-
+    """
+    Обработка правильного и неправильного вариантов ввода пользователя
+    """
     if user_variant == user_test_word:
         print(f"Верно, {user_variant} !")
         answers.append(True)
@@ -107,7 +109,7 @@ for number in range(TOTAL_ANSWERS):
         print(f"Неверно, {user_test_word} !")
         answers.append(False)
 
-
+# Выводим статистику работы пользователя
 print_statistics(answers)
 
 ############
