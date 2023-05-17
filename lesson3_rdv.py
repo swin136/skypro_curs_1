@@ -23,7 +23,6 @@ total_user_score = 0
 # Начало работы программы
 
 # НЕ допускаем ввода "пустого" ответа пользователем
-#user_choice = ""
 while True:
     user_choice = (input(f"Привет! Предлагаю проверить свои знания английского! Наберите \"{MAGIC_WORD_TO_BEGIN}\", чтобы начать! ")).lower().strip()
     if user_choice != "": break
