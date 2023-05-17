@@ -56,7 +56,7 @@ word_list = ["bird", "tree", "freedom", "random", "timer",
               "god", "kingthom", "swap", "linux", "pray", "Salt", "unix", 
               "FreeBSD", "OpenBSD", "FreeNas", "Debian", "pillow", "capital", "tower", 
               "user", "Snake", "security", "setting", "kernel", "release", "module", 
-              "edit", "selection", "ordinary", "terminal", "zabbix"]
+              "edit", "selection", "ordinary", "terminal", "zabbix", "repo"]
 
 # Список для хранения ответов пользователя
 answers = []
@@ -111,4 +111,3 @@ for number in range(TOTAL_ANSWERS):
 print_statistics(answers)
 
 ############
-
