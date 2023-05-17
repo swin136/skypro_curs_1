@@ -9,7 +9,7 @@ import random
 TOTAL_ANSWERS = 5
 
 # Для отключения отладочных сообщений
-DEBUG = bool(1)
+DEBUG = bool(0)
 
 def print_statistics(user_answers):
     """
