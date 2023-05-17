@@ -96,9 +96,9 @@ for number in range(TOTAL_ANSWERS):
     if DEBUG: print(f"Случайное слово № {number + 1} из списка >>> {user_test_word}")
     print(f"Слово {number + 1} >>> {template_morse_word}")
     # Исключаем пустой ввод пользователя
-    user_variant = ""
-    while user_variant == "":
+    while True:
         user_variant = input("Введите Ваш вариант: ").lower().strip()
+        if user_variant != "": break
 
     if user_variant == user_test_word:
         print(f"Верно, {user_variant} !")
