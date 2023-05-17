@@ -33,27 +33,33 @@ if user_choice == MAGIC_WORD_TO_BEGIN:
         print(f"Вопрос № {i + 1}")
         print(questions[i])
         attempt = USER_ATTEMPTS
+
         # Считываем ответ пользователя
         user_answer = (input("Ваш ответ: ")).lower().strip()
+        # Ответ верный!
         if user_answer == answers[i]:
             print("Ответ верный!")
+            # Добавляем баллы пользователю и увеличаем счетчик правильных ответов
             correct_user_answers += 1
             total_user_score += USER_ATTEMPTS
         #Неправильный ответ
         else:
             # Уменьшаем счетчик попыток ответа пользователя
+            # Даем пользователю доплнительные попытки ополнительные поп
             attempt -= 1
             for j in range(attempt):
                 user_answer = (input(f"Осталось попыток: {attempt-j} попробуйте ещё раз >>> ")).lower().strip()
                 if user_answer == answers[i]:
                     # Мы получили правильный ответ
                     print("Ответ верный!")
+                    # Добавляем баллы пользователю и увеличаем счетчик правильных ответов
                     correct_user_answers += 1
                     total_user_score += (attempt-j)
                     break
             # Правильного ответа от пользователя так и не получили
             if user_answer != answers[i]: print(f"Увы, но нет. Верный ответ: {answers[i]}")
 
+    # Выводим статистику работы пользователя
     print(f"Вот и всё! Вы ответили на {correct_user_answers} вопросов из {USER_ATTEMPTS} верно, вы набрали {total_user_score} баллов.")  
     
 # Пользователь так и не введ нужное слово для начала теста 
