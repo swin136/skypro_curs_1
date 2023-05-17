@@ -9,7 +9,7 @@ import random
 TOTAL_ANSWERS = 5
 
 # Для отключения отладочных сообщений
-DEBUG = bool(0)
+DEBUG = bool(1)
 
 def print_statistics(user_answers):
     """
@@ -37,14 +37,19 @@ def morse_encode(morse_list, words_to_encode):
     В функцию передаем ссылку на ранее созданный словарь со значением
     символов и соотвествующих им кодов Морзе
     """
+
+    """   
     user_word = list(words_to_encode.lower().strip())
     morse = ""
     for j in range(len(user_word)):
         if j == 0: 
-            morse = morse_code.get(user_word[j])  
+            morse = morse_list.get(user_word[j])  
             continue
-        morse = morse + " " + morse_code.get(user_word[j])   
-    return str(morse)
+        morse = morse + " " + morse_list.get(user_word[j])   
+    # Старый код  (плюс return str(morse))   
+
+    """ 
+    return (" ".join([morse_list[i] for i in words_to_encode])).strip()
 
 # Список слов для проверки пользователя
 word_list = ["bird", "tree", "freedom", "random", "timer", 
@@ -91,7 +96,7 @@ input("Нажмите Enter и начнем ")
 for number in range(TOTAL_ANSWERS):
     #Получаем слово для тестирования пользователя
     user_test_word = get_random_word(word_list)
-    template_morse_word = morse_encode(morse_code, user_test_word)
+    template_morse_word = (morse_encode(morse_code, user_test_word)).strip()
     # Для тестирования выводим правильное слово
     if DEBUG: print(f"Случайное слово № {number + 1} из списка >>> {user_test_word}")
     print(f"Слово {number + 1} >>> {template_morse_word}")
