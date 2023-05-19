@@ -56,6 +56,7 @@ user_levels = ["легкий", "средний", "сложный"]
 while user_level not in user_levels:
     user_level = input("Выберете уровень сложности:\nЛегкий, средний, сложный: ").lower().strip()
 
+# Подключаем словарь для работы с пользователем
 if user_level == user_levels[0]: words = words_easy
 elif user_level == user_levels[1]: words = words_medium
 else: words = words_hard
