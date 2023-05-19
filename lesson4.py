@@ -65,7 +65,7 @@ print("Выбран уровень сложности, мы предложим 5
 
 # Перебираем наш словарь
 for key in words:
-    user_answer = input(f"{key}, {len(str(words[key]))} букв, начинатеся с {words[key][0]}... ").lower().strip()
+    user_answer = input(f"{str(key).capitalize()}, {len(str(words[key]))} букв, начинатеся с {words[key][0]}... ").lower().strip()
     if user_answer == words[key]:
         print(f"Верно. {str(key).capitalize()} - это {words[key]}.")
         answers[key] = True
