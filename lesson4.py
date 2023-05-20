@@ -47,17 +47,19 @@ answers = {}
 
 # Начало программы
 
-# Уровень доступа пользователя
-user_level = ""
-
 # Список уровней пользователя
 user_levels = ["легкий", "средний", "сложный"]
 
+# Уровень доступа пользователя, который им выбирается
+user_level = None
 
+# Приветстсвенное сообшение, где просим пользователя ввести свой уровень
+# для тестирования
 while user_level not in user_levels:
     user_level = input("Выберете уровень сложности:\nЛегкий, средний, сложный: ").lower().strip()
 
-# Подключаем словарь для работы с пользователем
+# Подключаем словарь для тестирования с пользователем
+# в соотвествии с выбранным им уровнем
 if user_level == user_levels[0]: words = words_easy
 elif user_level == user_levels[1]: words = words_medium
 else: words = words_hard
@@ -78,20 +80,20 @@ for key in words:
    
 # Выводим итоговые результаты работы
 # Взводим флаг для подавлений вывода пустой положительной статистики
-is_first = True
+is_first = bool(1)
 # Выводим правильные ответы пользователя
 for key in answers:
-    if answers[key] == True: 
+    if answers[key]: 
         if is_first:
             is_first = False
             print("Правильно отвечены слова:" )
         print(key)
 
 # Взводим флаг для подавлений вывода пустой отрицательной статистики
-is_first = True
+is_first = bool(1)
 # Выводим неправильные ответы пользователя
 for key in answers:
-    if answers[key] == False: 
+    if not answers[key]: 
         if is_first:
             is_first = False
             print("Неправильно отвечены слова:" )
