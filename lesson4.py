@@ -23,7 +23,7 @@ words_easy = {
     "hand": "рука", 
     "people":"люди", 
     "evening": "вечер",
-    "minute":"минута", 
+    "minute":"минута" 
 }
 
 words_medium = { 
@@ -31,7 +31,7 @@ words_medium = {
     "feel": "чувствовать", 
     "make":"делать", 
     "open": "открывать",
-    "think":"думать", 
+    "think":"думать" 
 }
 
 words_hard = { 
@@ -39,7 +39,7 @@ words_hard = {
     "fortune": "удача", 
     "exercise":"упражнение", 
     "suggest": "предлагать",
-    "except":"кроме", 
+    "except":"кроме" 
 }
 
 # Словарь уровней знаний пользователя
@@ -49,7 +49,7 @@ levels = {
    2: "Можно лучше", 
    3: "Норм", 
    4: "Хорошо", 
-   5: "Отлично",
+   5: "Отлично"
 }
 
 # Динамический словарь для записи ответов юзверя
@@ -81,13 +81,13 @@ print("Выбран уровень сложности, мы предложим 5
 for key in words:
     # перебираем словарь words по ключам -- словам на английском языке
     # key - слово на английском языке, получается как words[key] или words.get(key) - значение словаря - слово на русском
-    user_answer = input(f"{str(key).capitalize()}, {len(str(words[key]))} букв, начинатеся с {words[key][0]}... ").lower().strip()
+    user_answer = input(f"{str(key).title()}, {len(str(words[key]))} букв, начинатеся с {words[key][0]}... ").lower().strip()
     if user_answer == words[key]:
-        print(f"Верно. {str(key).capitalize()} - это {words[key]}.")
+        print(f"Верно. {str(key).title()} - это {words[key]}.")
         # Димамически добавляем в словарь answers пару КЛЮЧ:БУЛЕВО_ЗНАЧЕНИЕ {слово на английском : ИСТИНА}
         answers[key] = True
     else:
-        print(f"Неверно. {str(key).capitalize()} - это {words[key]}.")
+        print(f"Неверно. {str(key).title()} - это {words[key]}.")
         # Димамически добавляем в словарь answers пару КЛЮЧ:БУЛЕВО_ЗНАЧЕНИЕ {слово на английском : ЛОЖЬ}
         answers[key] = False
    
