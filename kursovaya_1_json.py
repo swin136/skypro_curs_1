@@ -10,7 +10,7 @@ import json
 TOTAL_ANSWERS = 5
 
 # Для отключения отладочных сообщений
-DEBUG = bool(1)
+DEBUG = bool(0)
 
 def print_statistics(user_answers):
     """
@@ -81,7 +81,7 @@ def main():
     # Выводим список слов для тестирования пользователя
     # в количестве TOTAL_ANSWERS раз
     for number in range(TOTAL_ANSWERS):
-    #Получаем слово для тестирования пользователя
+        #Получаем слово для тестирования пользователя
         user_test_word = get_random_word(word_list)
         template_morse_word = (morse_encode(morse_code, user_test_word)).strip()
         # Для тестирования выводим правильное слово
